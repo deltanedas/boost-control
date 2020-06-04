@@ -1,0 +1,9 @@
+{
+	"name": "boost-control",
+	"displayName": "[accent]Boost [#00aaff]Control",
+	"author": "DeltaNedas",
+	"description": "Lets you manually control your mech's boosters on mobile.\n[stat]Requires [#00aaff]DeltaNedas/ui-lib[].",
+	"version": "1.0.0",
+	"dependencies": ["ui-lib"],
+	"hidden": true
+}
