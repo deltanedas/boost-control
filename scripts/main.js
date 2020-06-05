@@ -11,6 +11,7 @@ ui.addTable("side", "boost-control", table => {
 	const button = table.addButton("Not Boosting", run(() => {
 		control.boosting = !control.boosting;
 		button.setText(control.boosting ? "Boosting" : "Not Boosting");
+		table.background(Tex[control.boosting ? "buttonOver" : "buttonTrans"]);
 	})).width(120).get();
 });
 
