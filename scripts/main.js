@@ -15,7 +15,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-var ui = require("ui-lib/library");
+const ui = require("ui-lib/library");
 
 const control = {
 	boosting: false
@@ -25,13 +25,13 @@ this.global.boostControl = control;
 ui.addTable("side", "boost-control", table => {
 	table.background(Tex.buttonTrans);
 
-	const button = table.addButton("Not Boosting", run(() => {
+	const button = table.button("Not Boosting", () => {
 		control.boosting = !control.boosting;
 		button.setText(control.boosting ? "Boosting" : "Not Boosting");
 		table.background(Tex[control.boosting ? "buttonOver" : "buttonTrans"]);
-	})).width(120).get();
+	}).width(120).get();
 });
 
-Events.on(EventType.Trigger.update, run(() => {
-	Vars.player.isBoosting = control.boosting;
-}));
+Events.run(Trigger.update, () => {
+	Vars.player.boosting = control.boosting;
+});
