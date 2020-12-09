@@ -20,7 +20,7 @@ const ui = require("ui-lib/library");
 const control = {
 	boosting: false
 };
-this.global.boostControl = control;
+global.boostControl = control;
 
 ui.addTable("side", "boost-control", table => {
 	table.background(Tex.buttonTrans);
